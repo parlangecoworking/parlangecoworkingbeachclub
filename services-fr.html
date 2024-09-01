@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services 🇫🇷</title>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img height="80px" src="assets/logo.png"/>
+   </a>
+    <div class="navbar-brand">
+        <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
+    </div>
+    <ul class="navbar-links" id="navbarLinks">
+        <li><a href="apropos.html">A Propos</a></li>
+        <li><a href="contact-fr.html">Contact</a></li>
+        <li><a href="services.html">🇬🇧</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <img src="assets/sectionPNGs/Services.png" height="40px"/>
+    <div class="container left">
+      <img class="sectionImage" width="40%" src="assets/friends.jpg">
+      <div class="sectionText">
+        <h3 class="hover"  onclick="getInputValue('cocktails')">
+          Cocktails & Collègues
+        </h3>
+        <p>99€ / Mois</p>
+        <p>Notre package le moins cher, il inclut une chaise-longue à coté de la piscine orienté plein-sud (parrasol en option) et deux bières chaque vendredi à notre afterwork Parl' and the Gang.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="sectionText">
+        <h3 class="hover"  onclick="getInputValue('desk')">
+          Bureau & Boissons
+        </h3>
+        <p>149€ / Mois</p>
+        <p>Ce package, plus cher mais toujours hyper abordable, inclut un bureau duquel travailler et trois cocktails signatures à notre bar tous les jours entre 9h30 et 14h12.</p>
+      </div>
+      <img width="40%" src="assets/deskAndDrinks.jpg">
+    </div>
+    <div class="CTAContainer">
+      <div class="sectionText">
+        <h3 class="hover"  onclick="getInputValue('partner')">
+          Parl'Angel Partner
+        </h3>
+        <p>499€ / Mois </p>
+        <p>Notre package le plus exclusif, il inclut la même chose que l'offre Bureau et Boissons ainsi qu'un costume Parl'Angel unique au monde et la garantie d'être employé du mois, tous les mois.</p>
+      </div>
+      <img src="assets/parlAngel.png">
+      <button>
+        <h2>
+          Devenez un Parl'Angel aujourd'hui !
+        </h2>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

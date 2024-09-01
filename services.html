@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img height="80px" src="assets/logo.png"/>
+   </a>
+    <div class="navbar-brand">
+        <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
+    </div>
+    <ul class="navbar-links" id="navbarLinks">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services-fr.html">🇫🇷</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <img src="assets/sectionPNGs/Services.png" height="40px"/>
+    <div class="container left">
+      <img class="sectionImage" width="40%" src="assets/friends.jpg">
+      <div class="sectionText">
+        <h3 class="hover"  onclick="getInputValue('cocktails')">
+          Cocktails & Colleagues
+        </h3>
+        <p>99€ / Month</p>
+        <p>Our cheapest package, it includes a lawn chair by the pool with a southern exposure (sunshade sold separately) and two beers each friday at our afterwork Parl and the Gang.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="sectionText">
+        <h3 class="hover" onclick="getInputValue('desk')">
+          Desk & Drinks
+        </h3>
+        <p>149€ / Month</p>
+        <p>This package, more expensive but still super affordable, includes a desk from which to work and three signature cocktails at our bar every day between 9:30 AM and 2:12 PM. </p>
+      </div>
+      <img width="40%" src="assets/deskAndDrinks.jpg">
+    </div>
+    <div class="CTAContainer">
+      <div class="sectionText">
+        <h3 class="hover"  onclick="getInputValue('partner')">
+          Parl'Angel Partner
+        </h3>
+        <p>499€ / Month </p>
+        <p>Our most exclusive package, it includes everything in the Desk and Drinks offer as well as a one-of-a-kind Parl'Angel costume and the guarantee to be employee of the month, every month.</p>
+      </div>
+      <img src="assets/parlAngel.png">
+      <button>
+        <h3 style="color: aliceblue;">
+          Become a Parl'Angel today !
+        </h3>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

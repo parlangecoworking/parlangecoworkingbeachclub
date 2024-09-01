@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <script src="index.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img height="80px" src="assets/logo.png"/>
+   </a>
+    <div class="navbar-brand">
+        <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
+    </div>
+    <ul class="navbar-links" id="navbarLinks">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="panier.html">🇫🇷</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <img src="assets/sectionPNGs/checkout.png" height="40px"/>
+    <div class="CTAContainer">
+      <form>
+        <div class="flexcol" style="row-gap: 20px;" >
+          <label style="display: flex; flex-direction: row; align-items: flex-end;" >
+            <h3 style="margin-right: 10px;">
+              Package
+            </h3>
+          <div>
+            <select id="select-optgroup" onselect="">
+                <option value="cocktails">Cocktails and Colleagues</option>
+                <option value="desk">Desk and Drinks</option>
+                <option value="partner">Parlange Partner</option>
+            </select>
+          <script>
+            let value = localStorage.getItem('package');
+            setOption(document.getElementById('select-optgroup'), value);
+            const selectDropdown = document.getElementById("select-optgroup");
+            selectDropdown.addEventListener('change', function (e) {
+              console.log(e);
+              let selectedValue = e.target.selectedOptions[0].value;
+            setOption(document.getElementById('select-optgroup'), value);
+            let package = selectedValue == "cocktails" ? "Cocktails and Colleagues"
+            : selectedValue == "desk" ? "Desk and Drinks" : "Partner";
+            localStorage.setItem('package',selectedValue);
+            runPrice();
+            });
+            
+            // document.getElementById("name").placeholder = value;
+          </script>
+        </div> 
+        </label>
+        <div class="flexcol" >
+          <label >
+            <h3>
+              Price
+            </h3>
+          </label>
+          <div class="flexrow">
+            <h4 id="priceDesc"></h4>
+            <h3 id="priceTag"></h3>  
+          </div>
+          <p style="margin-top: 10px;">To avoid another WeWork fiasco, the PCBC requires a ten year commitment up-front but you save <span id="discount"></span> !</p>
+          <script>
+            function runPrice () {
+              console.log('trig')
+              let priceText = "";
+              let price = 0;
+              let priceDiscounted = 0;
+              value = localStorage.getItem('package');
+              if (value == 'cocktails'){
+                priceText += "99 * 12 * 10 ="
+                price +=99*12*10
+                priceDiscounted = price - 0.5
+                document.getElementById("discount").innerHTML = 0.5+"€";
+              } else 
+              if (value == 'desk'){
+                priceText += "149 * 12 * 10 ="
+                price +=149*12*10
+                priceDiscounted = price - 1.5
+                document.getElementById("discount").innerHTML = 1.5+"€";
+              } else 
+              if (value == 'partner'){
+                priceText += "499 * 12 * 10 ="
+                price +=499*12*10
+                priceDiscounted = price - 3.5
+                document.getElementById("discount").innerHTML = 3.5+"€";
+              }
+              // document.getElementById("priceTag").innerHTML = " <s>"+price+"</s> → " + priceDiscounted;
+              document.getElementById("priceDesc").innerHTML = priceText+" <s>"+price+"</s> → " + priceDiscounted;
+              console.log(priceDiscounted);
+            }
+            runPrice();
+          </script>  
+        </div>
+
+        <div class="flexcol" >
+          <label for="ccn"><h3>Credit Card Details:</h3></label>
+          <h4>Credit Card Number</h4>
+          <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" 
+            autocomplete="cc-number" maxlength="19" 
+            placeholder=" xxxx xxxx xxxx xxxx" required>
+          <div class="flexrow">
+            <h4>Expiry Date</h4>
+            <input type="month"/>
+            <h4>CVC</h4>
+            <input type="number" maxlength="3" minlength="3">
+          </div>
+          <p style="margin-top: 10px;">This is in no way secure, I cannot emphasize it enough. You should not input your real credit card information because I <b style="font-weight: 400;">will</b> use it to buy your mother flowers in your name. Mark my words.</p>
+          <div class="flexrow" style="justify-content: center;">
+            <button style="width: 50%; margin-top: 20px;">
+              <h4 style="color: #FFFEE4;">
+                Looks good to me !<br>
+                Sign me up ! 
+              </h4>
+            </button>
+          </div>
+        </div>  
+      </form>
+    </div>
+  </div>
+</body>
+</html>

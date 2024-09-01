@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact 🇫🇷</title>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img height="80px" src="assets/logo.png"/>
+   </a>
+    <div class="navbar-brand">
+        <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
+    </div>
+    <ul class="navbar-links" id="navbarLinks">
+        <li><a href="apropos.html">A Propos</a></li>
+        <li><a href="services-fr.html">Services</a></li>
+        <li><a href="contact.html">🇬🇧</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <img src="assets/sectionPNGs/contact.png" height="40px"/>
+    <div class="CTAContainer">
+      <div class="sectionText">
+        <h3>
+          Glissez dans nos DMs si vous avez des questions.
+        </h3>
+        <p>
+          Vous pensez que vous avz ce qu'il faut pour nager avec les tortues ? (Ne vous faites pas avoir, en groupe elles sont beaucoup plus dangeureuses qu'un requin).
+        </p>
+        <p>
+          Lances nous une bouteille à la mer avec le formulaire si dessous et on revient vers toi dès que la marée monte.
+        </p>
+      </div>
+      <form>
+        <div class="flexrow" >
+          <label >
+            <h3>
+              Nom
+            </h3>
+          </label>
+          <input id="name"/>
+        </div> 
+        <div class="flexrow" >
+          <label >
+            <h3>
+              Email
+            </h3>
+          </label>
+          <input id="email"/>
+        </div>
+        <div class="flexcol" >
+          <label >
+            <h3>
+              Message
+            </h3>
+          </label>
+          <textarea id="message" rows="8" cols="33">
+
+          </textarea>
+          <button class="slider">
+            Glisseeeeee !
+          </button>
+        </div>  
+      </form>
+    </div>
+  </div>
+</body>
+</html>
